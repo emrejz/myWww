@@ -1,0 +1,27 @@
+.vscTopMenu {
+  span {
+    padding: 6px;
+    cursor: not-allowed;
+  }
+  img {
+    width: 20px;
+  }
+}
+.vscExit {
+  span {
+    padding: 10px 14px;
+    cursor: pointer;
+    &:first-child {
+      margin-left: 0px;
+    }
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  .scaleIcon {
+    border: 2px solid;
+    padding: 6px;
+    align-self: center;
+    height: 1px;
+  }
+}

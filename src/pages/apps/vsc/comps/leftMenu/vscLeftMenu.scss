@@ -1,0 +1,40 @@
+.vscLeftMenu {
+  img {
+    padding: 10px 10px;
+    cursor: not-allowed;
+    &:nth-child(1) {
+      cursor: pointer;
+    }
+  }
+}
+
+.rightArrow {
+  cursor: pointer;
+  &::before {
+    content: ">";
+    padding-right: 4px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+.downArrow {
+  cursor: pointer;
+  &::before {
+    content: "v";
+    padding-right: 4px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+.classForCursor {
+  cursor: pointer;
+}
+.vscFolders {
+  width: fit-content;
+  max-width: 300px;
+  transition: 1s ease;
+}
+.vscFoldersClose {
+  max-width: 0px;
+  transition: 1s ease;
+}
