@@ -1,0 +1,34 @@
+.bioContainer {
+  position: absolute;
+  // max-height: calc(100vh - 46px);
+  box-shadow: 0px 0px 20px black;
+
+  .bioTopExit {
+    span {
+      margin: 6px;
+      padding: 4px 4px;
+      cursor: pointer;
+      &:first-child {
+        margin-left: 0px;
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    .scaleIcon {
+      border: 2px solid;
+      padding: 6px;
+      align-self: center;
+      height: 1px;
+    }
+  }
+  .bioHeader {
+    // min-height: 46px;
+  }
+  .bioBody {
+    span {
+      word-break: keep-all;
+    }
+  }
+}
