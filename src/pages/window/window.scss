@@ -1,0 +1,33 @@
+.errorApp {
+  .blueError {
+    display: block;
+  }
+  &.projectSelection {
+    transition: 0s;
+    background: black;
+  }
+  .dateBox {
+    display: none;
+  }
+}
+
+.openedApp {
+  .introApp {
+    display: none;
+  }
+  &.projectSelection {
+    transition: 0s;
+    background: black;
+  }
+}
+.blueError {
+  display: none;
+}
+.windowContainer {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  bottom: 46px;
+  left: 0;
+  right: 0;
+}
