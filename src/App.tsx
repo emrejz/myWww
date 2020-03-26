@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import { Window, Loading } from "./pages";
+import "./app.scss";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+const App: React.FC = () => {
+  const [loadedDocument, setLoadedDocument] = useState<string | Event>(
+    "blueScreen"
   );
-}
+  window.addEventListener("load", () => setLoadedDocument("loadingScreen"));
+  useEffect(() => {
+    const sto = setTimeout(() => {
+      setLoadedDocument("loaded");
+    }, 2000);
+    return () => {
+      clearTimeout(sto);
+      window.removeEventListener("load", setLoadedDocument);
+    };
+  }, [loadedDocument]);
+  return loadedDocument == "loaded" ? (
+    <Window />
+  ) : (
+    <Loading loadedDocument={loadedDocument} />
+  );
+};
 
 export default App;

@@ -1,0 +1,69 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 100px;
+  font-family: roboR;
+  overflow: hidden;
+  position: relative;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+#root {
+  width: 100%;
+  height: 100%;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  &:active{
+    width:20px
+  }
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, lightblue);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, #2d8dad);
+}
+@font-face {
+  font-family: "roboL";
+  src: url("./assets/fonts/RobotoMono-Light.ttf");
+}
+@font-face {
+  font-family: "roboR";
+  src: url("./assets/fonts/RobotoMono-Regular.ttf");
+}
+@font-face {
+  font-family: "roboM";
+  src: url("./assets/fonts/RobotoMono-Medium.ttf");
+}
+@font-face {
+  font-family: "roboB";
+  src: url("./assets/fonts/RobotoMono-Bold.ttf");
+}
+
+@media screen and (max-width:600px){
+  html,body{
+  font-size:90px;
+  }
+}
+@media screen and (min-width:1200px){
+  html,body{
+  font-size:110px;
+  }
+}
+@media screen and (min-width:2000px){
+  html,body{
+  font-size:180px;
+  }
+}
+ 
+ 
