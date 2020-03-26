@@ -1,0 +1,31 @@
+.loadingBox {
+  border: 1px solid white;
+  width: 200px;
+  padding: 2px;
+  margin-bottom: 14px;
+  border-radius: 4px;
+  overflow: hidden;
+
+  span {
+    height: 30px;
+    margin: 2px;
+    border-radius: 4px;
+    width: 10px;
+    background-color: green;
+    animation: slider 1.4s linear infinite;
+  }
+}
+.blueScreen {
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+@keyframes slider {
+  0% {
+    transform: translateX(-30px);
+  }
+  100% {
+    transform: translateX(200px);
+  }
+}
