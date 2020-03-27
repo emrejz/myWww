@@ -105,7 +105,7 @@ export default [
     repo: "https://github.com/emrejz/cinemaAppNextjs"
   },
   {
-    tag: ["all", "front", "withoutFrmwrk"],
+    tag: ["all", "front", "noFrmwrk"],
     title: "depixenPrjct",
     desc:
       "I didnt use any framework in the front-end. I developed using css,html and js.",
