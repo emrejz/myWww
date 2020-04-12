@@ -15,7 +15,7 @@ const LeftMenuItems: React.FC<Props> = ({
   selectedFile,
   setSelectedFile,
   selectedFolderFunc,
-  selectedFolder
+  selectedFolder,
 }): JSX.Element | null => {
   const mainTags = [
     "www",
@@ -26,7 +26,7 @@ const LeftMenuItems: React.FC<Props> = ({
     "next",
     "vue",
     "angular",
-    "noFrmwrk"
+    "noFrmwrk",
   ];
   const condPL = (param: string): string => {
     switch (param) {
@@ -82,7 +82,8 @@ const LeftMenuItems: React.FC<Props> = ({
     <Block col wid={name == mainTags[0] ? "100%" : ""} pl={condPL(name)}>
       <Text
         size="textB"
-        pad="3px 0px"
+        mar="3px 0px"
+        mb={status ? "-3px" : "3px"}
         pl={name == mainTags[0] ? "15px" : ""}
         bc={name == mainTags[0] ? "grayVscWWWFolder" : ""}
         wid={name == mainTags[0] ? "100%" : ""}
@@ -92,7 +93,7 @@ const LeftMenuItems: React.FC<Props> = ({
         {name}
       </Text>
       {condFile(name) && status && (
-        <Block col>
+        <Block col flex="0">
           {data.map(
             (file, index) =>
               file.tag.includes(name) && (

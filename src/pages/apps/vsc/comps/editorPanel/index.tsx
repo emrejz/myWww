@@ -21,7 +21,7 @@ const VscEditorPanel: React.FC<Props> = ({ selectedFile, setSelectedFile }) => {
 
   const selectedFileFunc = (file: ISelectedVscFile) => {
     setSelectedFile(
-      selectedFile.map(item => {
+      selectedFile.map((item) => {
         if (item.title == file.title) return { ...file, selected: true };
         else return { ...item, selected: false };
       })
@@ -43,13 +43,13 @@ const VscEditorPanel: React.FC<Props> = ({ selectedFile, setSelectedFile }) => {
     );
   };
   const showSelectedFile = (): ISelectedVscFile | null => {
-    const item = selectedFile.filter(it => it.selected == true);
+    const item = selectedFile.filter((it) => it.selected == true);
     return item[0] ? item[0] : null;
   };
   return (
-    <Block col flex="1" bc="grayVsc" over="auto">
-      <Block bc="grayVscTabBar" over="auto">
-        {selectedFile.map(item => (
+    <Block col flex="1" over="auto" bc="grayVsc">
+      <Block bc="grayVscTabBar" overX="auto">
+        {selectedFile.map((item) => (
           <Block
             ai="center"
             jc="space-around"
@@ -75,7 +75,7 @@ const VscEditorPanel: React.FC<Props> = ({ selectedFile, setSelectedFile }) => {
           </Block>
         ))}
       </Block>
-      <Block flex="1" over="auto">
+      <Block overY="auto">
         <ProjectCard item={showSelectedFile()}></ProjectCard>
       </Block>
     </Block>

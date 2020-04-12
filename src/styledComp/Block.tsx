@@ -7,6 +7,8 @@ interface Props {
   jc?: string;
   ai?: string;
   over?: string;
+  overX?: string;
+  overY?: string;
   z?: string | number;
   clr?: string;
   font?: string;
@@ -34,7 +36,7 @@ interface Props {
 export const Block: StyledComponent<"div", any, Props, never> = styled.div<
   Props
 >(
-  props =>
+  (props) =>
     `
     display: flex;
     flex-basis: auto;
@@ -45,6 +47,8 @@ export const Block: StyledComponent<"div", any, Props, never> = styled.div<
     ${props.ai ? `align-items:${props.ai}` : ""}; 
     ${props.pos ? `position:${props.pos}` : ""}; 
     ${props.over ? `overflow:${props.over}` : ""}; 
+    ${props.overX ? `overflow-x:${props.overX}` : ""}; 
+    ${props.overY ? `overflow-y:${props.overY}` : ""}; 
     ${props.z ? `z-index:${props.z}` : ""}; 
     ${
       props.clr && props.theme.clr[props.clr]

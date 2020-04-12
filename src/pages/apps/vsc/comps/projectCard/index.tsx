@@ -9,7 +9,6 @@ const ProjectCard: React.FC<Props> = ({ item }): JSX.Element | null => {
   return item ? (
     <Block
       col
-      flex="1"
       jc="flex-start"
       ai="flex-start"
       size="textB"
@@ -20,7 +19,7 @@ const ProjectCard: React.FC<Props> = ({ item }): JSX.Element | null => {
         <Text>export default </Text>
         {"{"}
       </Text>
-      <Block pad="10px">
+      <Block wrp pad="10px">
         <Text clr="blueL">title: </Text>
         <Text>
           <Text clr="orangeD">"</Text>
@@ -29,7 +28,7 @@ const ProjectCard: React.FC<Props> = ({ item }): JSX.Element | null => {
           <Text>,</Text>
         </Text>
       </Block>
-      <Block pad="10px">
+      <Block wrp pad="10px">
         <Text clr="blueL">links: </Text>
         <Text>
           <Text clr="orangeD">[</Text>

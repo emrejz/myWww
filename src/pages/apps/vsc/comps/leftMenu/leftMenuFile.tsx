@@ -9,12 +9,12 @@ interface Props {
 const LeftMenuFile: React.FC<Props> = ({
   file,
   selectedFile,
-  setSelectedFile
+  setSelectedFile,
 }) => {
   const selectedFileFunc = () => {
     let newList = [];
-    if (selectedFile.filter(item => item.title == file.title).length) {
-      newList = selectedFile.map(item =>
+    if (selectedFile.filter((item) => item.title == file.title).length) {
+      newList = selectedFile.map((item) =>
         item.title == file.title
           ? { ...item, selected: true }
           : { ...item, selected: false }
@@ -22,7 +22,7 @@ const LeftMenuFile: React.FC<Props> = ({
     } else {
       newList = [
         { ...file, selected: true },
-        ...selectedFile.map(item => ({ ...item, selected: false }))
+        ...selectedFile.map((item) => ({ ...item, selected: false })),
       ];
     }
     setSelectedFile([...newList]);
@@ -30,7 +30,7 @@ const LeftMenuFile: React.FC<Props> = ({
 
   return (
     <Text
-      pad="2px"
+      pad="1px"
       pl="10px"
       pr="15px"
       size="textN"
