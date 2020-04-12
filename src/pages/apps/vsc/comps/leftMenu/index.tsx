@@ -50,7 +50,6 @@ const VscLeftMenu: React.FC<Props> = ({ selectedFile, setSelectedFile }) => {
 
       <Block
         col
-        flex="1"
         bc="grayVscFolders"
         font="roboR"
         clr="whiteD"
@@ -59,7 +58,7 @@ const VscLeftMenu: React.FC<Props> = ({ selectedFile, setSelectedFile }) => {
         <Text size="textB" pad="4px 0px" pl="15px">
           EXPLORER
         </Text>
-        <Block col flex="1" overY="auto" ai="flex-start">
+        <Block col overY="auto" ai="flex-start">
           {selectedFolder.map((item, index) => (
             <LeftMenuFolder
               item={item}

@@ -12,7 +12,14 @@ const VscApp: React.FC<Props> = ({ state, dispatch }) => {
   const [selectedFile, setSelectedFile] = useState<ISelectedVscFile[]>([]);
   const { name, size, zIndex } = state;
   return (
-    <Block col wid={size} hei={size} z={zIndex} className="vscContainer">
+    <Block
+      col
+      flex="1"
+      mnxW={size}
+      mnxH={size}
+      z={zIndex}
+      className="vscContainer"
+    >
       <VscTopMenu name={name} dispatch={dispatch} />
       <Block
         flex="1"
