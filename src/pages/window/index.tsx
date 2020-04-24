@@ -6,6 +6,7 @@ import { BioApp, VscApp, GameApp } from "../";
 import { StartStick } from "components";
 import { IGlobalContext } from "interfaces";
 import "./window.scss";
+import BatakApp from "pages/apps/games/batak";
 
 const WindowScreen: React.FC = () => {
   const [startMenu, setStartMenu] = useState<boolean>(false);
@@ -44,7 +45,7 @@ const WindowScreen: React.FC = () => {
           bc="greenWindScreen"
         >
           {appList.map(
-            item =>
+            (item) =>
               item.name != "shut down" && (
                 <AppFile item={item} dispatch={dispatch} key={item.name} />
               )
@@ -52,6 +53,9 @@ const WindowScreen: React.FC = () => {
         </Block>
         {appList[2].open && (
           <GameApp appState={appList[2]} dispatch={dispatch} />
+        )}
+        {appList[3].open && (
+          <BatakApp appState={appList[3]} dispatch={dispatch} />
         )}
         {appList[1].open && <BioApp state={appList[1]} dispatch={dispatch} />}
         {appList[0].open && <VscApp state={appList[0]} dispatch={dispatch} />}
