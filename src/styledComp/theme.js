@@ -15,7 +15,8 @@ const clr = {
   yellowD: "#dada0a",
   blueL: "#86a1ff",
   purpleD: "#b145b1",
-  orangeD: "#ce8b11"
+  orangeD: "#ce8b11",
+  redCard: "#E64C3C",
 };
 const bc = {
   black: "#000",
@@ -34,7 +35,8 @@ const bc = {
   grayWindTop: "#777",
   whiteStartActiveTab: "#f7f7f7",
   blueVscFooter: "#007acc",
-  greenWindScreen: "#008083"
+  greenWindScreen: "#008083",
+  greenBatakScreen: "#006400",
 };
 const size = {
   init: "100px",
@@ -50,18 +52,18 @@ const size = {
   textB: "0.18em",
   textN: "0.16em",
   textS: "0.14em",
-  textXS: ".12em"
+  textXS: ".12em",
 };
 const font = {
   mono: "Lucida Console, Monaco,  monospace",
   roboB: "roboB",
   roboM: "roboM",
   roboR: "roboR",
-  roboL: "roboL"
+  roboL: "roboL",
 };
 export default {
   clr,
   bc,
   size,
-  font
+  font,
 };
