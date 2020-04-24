@@ -1,11 +1,12 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import { Block, Text } from "styledComp";
 import { BatakCard } from "./cards/usercCard";
 import { BatakBotCard } from "./cards/botCard";
 import { BatakGameCard } from "./cards/gameCard";
-import "./index.scss";
 import BatakGameHeader from "./header";
 import { IAppState, IGlobalDispatch } from "../../../../interfaces";
+import "./index.scss";
+
 interface Props {
   appState: IAppState;
   dispatch: IGlobalDispatch;
@@ -83,6 +84,7 @@ const BatakApp: React.FC<Props> = ({ appState, dispatch }) => {
     setScore([0, 0, 0, 0]);
     setGameCount(0);
     setLastWinner(0);
+    setTurnNumber(0);
     let count = 51;
     let tempCards = cards;
     let userCards: any = [];
@@ -127,8 +129,7 @@ const BatakApp: React.FC<Props> = ({ appState, dispatch }) => {
       if (turnNumber != 0 && gameCount != 13) {
         game.length != 4 && whichCard();
       }
-      if (gameCount == 13) {
-      }
+
       if (game.length == 4) {
         setGameCount(gameCount + 1);
         const maxKoz = game
