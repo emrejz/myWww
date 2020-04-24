@@ -1,4 +1,4 @@
-import { GameActionTypes } from "./pages/apps/game/store/actions";
+import { GameActionTypes } from "./pages/apps/games/mine/store/actions";
 import { GlobalActionTypes } from "./store/actions";
 
 // GLOBAL-STATE
