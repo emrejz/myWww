@@ -11,7 +11,7 @@ const initialState: IGlobalState = {
       open: false,
       size: "100%",
       zIndex: 19,
-      isActive: false
+      isActive: false,
     },
     {
       name: "bio",
@@ -19,15 +19,23 @@ const initialState: IGlobalState = {
       open: false,
       size: "100%",
       zIndex: 19,
-      isActive: false
+      isActive: false,
     },
     {
-      name: "game",
-      icon: "game.png",
+      name: "mine",
+      icon: "mine.png",
       open: false,
       size: "fit-content",
       zIndex: 19,
-      isActive: false
+      isActive: false,
+    },
+    {
+      name: "batak",
+      icon: "maca.png",
+      open: false,
+      size: "fit-content",
+      zIndex: 19,
+      isActive: false,
     },
     {
       name: "shut down",
@@ -35,9 +43,9 @@ const initialState: IGlobalState = {
       open: false,
       size: "100%",
       zIndex: 19,
-      isActive: false
-    }
-  ]
+      isActive: false,
+    },
+  ],
 };
 export const Context = createContext<IGlobalState | any>(initialState);
 
