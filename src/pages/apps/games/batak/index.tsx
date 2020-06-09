@@ -124,6 +124,7 @@ const BatakApp: React.FC<Props> = ({ appState, dispatch }) => {
   }, []);
   useEffect(() => {
     const sti = setTimeout(() => {
+      let winner = null;
       gameCount == 13 && clearInterval(sti);
 
       if (turnNumber != 0 && gameCount != 13) {
@@ -143,20 +144,16 @@ const BatakApp: React.FC<Props> = ({ appState, dispatch }) => {
 
         const indexKoz = game.indexOf(maxKoz);
         const indexWithoutKoz = game.indexOf(maxCardWithoutKoz);
-        if (indexKoz < 0 && indexWithoutKoz >= 0) {
-          let winner = (lastWinner + indexWithoutKoz) % 4;
+        if (indexKoz < 0) {
+          winner = (lastWinner + indexWithoutKoz) % 4;
           score[winner] = score[winner] + 10;
-          setScore([...score]);
-          setTurnNumber(winner);
-          setLastWinner(winner);
-        }
-        if (indexKoz >= 0) {
-          let winner = (lastWinner + indexWithoutKoz) % 4;
+        } else {
+          winner = (lastWinner + indexKoz) % 4;
           score[winner] = score[winner] + 10;
-          setScore([...score]);
-          setTurnNumber(winner);
-          setLastWinner(winner);
         }
+        setScore([...score]);
+        setTurnNumber(winner);
+        setLastWinner(winner);
         setGame([]);
       }
     }, 500);
