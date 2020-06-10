@@ -27,12 +27,11 @@ const BioBody: React.FC<Props> = ({ state, dispatch }) => {
         education -> Namık Kemal University Electronics and Communication
         engr.2011-2018
       </Text>
-      <Text mb="24px">tel -> 506 880 0809</Text>
       <Text mb="24px">email -> emre.kayacan@msn.com</Text>
       <Text mb="24px">git -> https://github.com/emrejz</Text>
       <Text mb="24px">
-        skills -> react, redux, vue, vuex, angular, NgRx, typeScript, svelte,
-        next, react-native, node, mongo, redis, graphql, socket, materialUI,
+        skills -> react, redux, vue, angular, NgRx, typeScript, next,
+        react-native, node, mongo, redis, graphql, socket, materialUI,
         bootstrap, styled-components, pug, HTML/CSS/SCSS
       </Text>
       <Text mb="24px">
