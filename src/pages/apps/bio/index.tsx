@@ -9,7 +9,6 @@ interface Props {
 }
 const BioApp: React.FC<Props> = ({ state, dispatch }) => {
   const { size, zIndex } = state;
-  console.log("bio");
 
   return (
     <Block
