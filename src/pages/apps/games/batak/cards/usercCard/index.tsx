@@ -37,6 +37,7 @@ export const BatakCard: React.FC<Props> = ({ card, cardClick }) => {
   return (
     <Block
       col
+      pos="relative"
       className="cardContainer"
       clr={x__ == "k" || x__ == "n" ? "redCard" : "black"}
       onClick={() => cardClick(card)}
@@ -63,6 +64,7 @@ export const BatakCard: React.FC<Props> = ({ card, cardClick }) => {
           </Block>
         </Block>
       </Block>
+      <Block className="blockBatakText" />
     </Block>
   );
 };
