@@ -1,6 +1,13 @@
 export default [
   {
     tag: ["all", "front", "noFrmwrk"],
+    title: "wasm-circles",
+    desc: "I created this project to learn webassembly with emscripten.",
+    demo: "https://circle-webassembly.herokuapp.com/",
+    repo: "https://github.com/emrejz/wasm-circles",
+  },
+  {
+    tag: ["all", "front", "noFrmwrk"],
     title: "search-helper",
     desc:
       "I created this project for simplify search operation on list of objects by user's condition. I published on npm.",
