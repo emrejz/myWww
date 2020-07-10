@@ -54,7 +54,7 @@ const BioBody: React.FC<Props> = ({ state, dispatch }) => {
         Todo;
         <br />
         # winamp /papi papi papi çilo
-        <br /># batak /best turkish strategy game <a>&#x2714;</a>
+        <br /># batak /best turkish strategy game <i>&#x2714;</i>
         <br /># os notification sounds
       </Text>
     </Block>

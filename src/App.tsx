@@ -17,7 +17,7 @@ const App: React.FC = () => {
       window.removeEventListener("load", setLoadedDocument);
     };
   }, [loadedDocument]);
-  return loadedDocument == "loaded" ? (
+  return loadedDocument === "loaded" ? (
     <Window />
   ) : (
     <Loading loadedDocument={loadedDocument} />

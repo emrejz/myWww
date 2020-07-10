@@ -23,7 +23,7 @@ const VscLeftMenu: React.FC<Props> = ({ selectedFile, setSelectedFile }) => {
   ]);
   const selectedFolderFunc = (name: string) => {
     let newList = selectedFolder.map((item) =>
-      item.name == name ? { ...item, status: !item.status } : item
+      item.name === name ? { ...item, status: !item.status } : item
     );
 
     setSelectedFolder([...newList]);

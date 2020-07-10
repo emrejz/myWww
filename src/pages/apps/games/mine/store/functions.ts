@@ -27,14 +27,14 @@ const finder = (state: IGameState, cell: IGameCell): IGameState => {
         cellList[y][x].open = true;
         state.gameStatus = "start";
       }
-      if (value == 0) {
+      if (value === 0) {
         cellList[y][x].open = true;
         cellList[y][x].val = 0;
         state.gameStatus = "start";
 
         findAround(state, cell);
       }
-      if (state.openedCell == 72) {
+      if (state.openedCell === 72) {
         state.openedCell = 0;
         state.gameStatus = "success";
       }
@@ -58,7 +58,7 @@ const findAround = (state: IGameState, cell: IGameCell) => {
         col < cellList[0].length &&
         row > -1 &&
         row < cellList.length &&
-        !(row == y && col == x)
+        !(row === y && col === x)
       ) {
         finder(state, cellList[row][col]);
       }
@@ -78,9 +78,9 @@ const startGame = (): IGameState => {
         open: false,
         val: "",
         mine: false,
-        flag: false
+        flag: false,
       });
-      if (col == mineCounter - 1) cellList = [...cellList, newLine];
+      if (col === mineCounter - 1) cellList = [...cellList, newLine];
     }
   }
 
@@ -98,18 +98,18 @@ const startGame = (): IGameState => {
     gameStatus: "ready",
     flagCounter: 0,
     openedCell: 0,
-    mineCounter: 9
+    mineCounter: 9,
   };
 };
 const openCell = (state: IGameState, payload: IGameCell): IGameState => {
   let { gameStatus } = state;
-  if (gameStatus == "ready" || gameStatus == "start") {
+  if (gameStatus === "ready" || gameStatus === "start") {
     return finder(state, payload);
   } else return state;
 };
 const flagCell = (state: IGameState, payload: IGameCell): IGameState => {
   let { gameStatus, cellList } = state;
-  if (gameStatus == "ready" || gameStatus == "start") {
+  if (gameStatus === "ready" || gameStatus === "start") {
     const { x, y, flag, open } = payload;
     if (flag) {
       state.flagCounter = state.flagCounter - 1;

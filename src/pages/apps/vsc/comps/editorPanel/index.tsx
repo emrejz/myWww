@@ -22,7 +22,7 @@ const VscEditorPanel: React.FC<Props> = ({ selectedFile, setSelectedFile }) => {
   const selectedFileFunc = (file: ISelectedVscFile) => {
     setSelectedFile(
       selectedFile.map((item) => {
-        if (item.title == file.title) return { ...file, selected: true };
+        if (item.title === file.title) return { ...file, selected: true };
         else return { ...item, selected: false };
       })
     );
@@ -30,7 +30,7 @@ const VscEditorPanel: React.FC<Props> = ({ selectedFile, setSelectedFile }) => {
   const closeFile = (file: ISelectedVscFile) => {
     setSelectedFile(
       selectedFile.filter((item, index) => {
-        if (item.title == file.title) {
+        if (item.title === file.title) {
           if (selectedFile[index + 1]) {
             selectedFile[index + 1].selected = true;
           } else {
@@ -43,7 +43,7 @@ const VscEditorPanel: React.FC<Props> = ({ selectedFile, setSelectedFile }) => {
     );
   };
   const showSelectedFile = (): ISelectedVscFile | null => {
-    const item = selectedFile.filter((it) => it.selected == true);
+    const item = selectedFile.filter((it) => it.selected === true);
     return item[0] ? item[0] : null;
   };
   return (

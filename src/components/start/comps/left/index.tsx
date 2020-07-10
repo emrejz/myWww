@@ -7,10 +7,10 @@ interface Props {
 }
 const StartLeft: React.FC<Props> = ({
   globalContext: { state, dispatch },
-  startMenu
+  startMenu,
 }) => {
   const startMenuFunc = (name: string) => {
-    if (name == "shut down") {
+    if (name === "shut down") {
       window.open(
         "https://i.giphy.com/media/ccRN9H1zx8KSgUPgyD/source.gif",
         "_self"
@@ -36,7 +36,7 @@ const StartLeft: React.FC<Props> = ({
       </Text>
       {startMenu && (
         <Block col ai="flex-start" className="startMenu">
-          {state.appList.map(item => (
+          {state.appList.map((item) => (
             <Block
               ai="center"
               bc="grayWind"

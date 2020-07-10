@@ -125,13 +125,13 @@ const BatakApp: React.FC<Props> = ({ appState, dispatch }) => {
   useEffect(() => {
     const sti = setTimeout(() => {
       let winner = null;
-      gameCount == 13 && clearInterval(sti);
+      gameCount === 13 && clearInterval(sti);
 
-      if (turnNumber != 0 && gameCount != 13) {
-        game.length != 4 && whichCard();
+      if (turnNumber !== 0 && gameCount !== 13) {
+        game.length !== 4 && whichCard();
       }
 
-      if (game.length == 4) {
+      if (game.length === 4) {
         setGameCount(gameCount + 1);
         const maxKoz = game
           .filter((item) => item.includes("m"))
@@ -183,20 +183,20 @@ const BatakApp: React.FC<Props> = ({ appState, dispatch }) => {
     let leakCard = deck[0];
     let selectedCard: string = "";
 
-    if (sameCards.length == 0 && strongCards.length == 0) {
+    if (sameCards.length === 0 && strongCards.length === 0) {
       selectedCard = leakCard;
     }
-    if (sameCards.length != 0) {
+    if (sameCards.length !== 0) {
       let filteredCards = sameCards.filter(
         (item) => item > strongCardWithoutKoz
       );
-      if (filteredCards[0] && !(strongCardWithKoz && x__ != "m")) {
+      if (filteredCards[0] && !(strongCardWithKoz && x__ !== "m")) {
         selectedCard = filteredCards[0];
       } else {
         selectedCard = sameCards[0];
       }
     }
-    if (sameCards.length == 0 && strongCards.length != 0) {
+    if (sameCards.length === 0 && strongCards.length !== 0) {
       let filteredCards = strongCards.filter(
         (item) => item > strongCardWithKoz
       );
@@ -220,20 +220,20 @@ const BatakApp: React.FC<Props> = ({ appState, dispatch }) => {
     let playableCards: string[] = [];
     if (!firstCard) return (playableCards = user);
 
-    if (sameCards.length == 0 && strongCards.length == 0) {
+    if (sameCards.length === 0 && strongCards.length === 0) {
       playableCards = user;
     }
-    if (sameCards.length != 0) {
+    if (sameCards.length !== 0) {
       let filteredCards = sameCards.filter(
         (item) => item > strongCardWithoutKoz
       );
-      if (filteredCards[0] && !(strongCardWithKoz && x__ != "m")) {
+      if (filteredCards[0] && !(strongCardWithKoz && x__ !== "m")) {
         playableCards = filteredCards;
       } else {
         playableCards = sameCards;
       }
     }
-    if (sameCards.length == 0 && strongCards.length != 0) {
+    if (sameCards.length === 0 && strongCards.length !== 0) {
       let filteredCards = strongCards.filter(
         (item) => item > strongCardWithKoz
       );
@@ -250,18 +250,18 @@ const BatakApp: React.FC<Props> = ({ appState, dispatch }) => {
     const setBot: any = setPlayers[turnNumber];
     let selectedCard: string = "";
     let count = turnNumber + 1;
-    setTurnNumber(count == 4 ? 0 : count);
+    setTurnNumber(count === 4 ? 0 : count);
     selectedCard = filteredDeckBot(bot);
     setGame([...game, selectedCard]);
-    setBot([...bot.filter((item) => item != selectedCard)]);
+    setBot([...bot.filter((item) => item !== selectedCard)]);
   };
 
   const cardClick = (card: any) => {
     const filteredDeck = filteredDeckUser();
-    if (game.length != 4 && turnNumber == 0 && filteredDeck.includes(card)) {
+    if (game.length !== 4 && turnNumber === 0 && filteredDeck.includes(card)) {
       setTurnNumber(turnNumber + 1);
       setGame([...game, card]);
-      setUser([...user.filter((item) => item != card)]);
+      setUser([...user.filter((item) => item !== card)]);
     }
   };
   return (
@@ -302,15 +302,15 @@ const BatakApp: React.FC<Props> = ({ appState, dispatch }) => {
               <BatakGameCard
                 key={index}
                 card={item}
-                top={(index + lastWinner) % 4 == 0 ? "70px" : ""}
-                left={(index + lastWinner) % 4 == 3 ? "70px" : ""}
-                right={(index + lastWinner) % 4 == 1 ? "70px" : ""}
-                bottom={(index + lastWinner) % 4 == 2 ? "70px" : ""}
+                top={(index + lastWinner) % 4 === 0 ? "70px" : ""}
+                left={(index + lastWinner) % 4 === 3 ? "70px" : ""}
+                right={(index + lastWinner) % 4 === 1 ? "70px" : ""}
+                bottom={(index + lastWinner) % 4 === 2 ? "70px" : ""}
               />
             );
           })}
         </Block>
-        {gameCount == 13 && (
+        {gameCount === 13 && (
           <Block col pos="absolute" className="batakResultBox">
             <Text>You: {score[0]} </Text>
             <Text>Bot1: {score[1]} </Text>

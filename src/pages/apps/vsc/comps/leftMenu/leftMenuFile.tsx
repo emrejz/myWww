@@ -13,9 +13,9 @@ const LeftMenuFile: React.FC<Props> = ({
 }) => {
   const selectedFileFunc = () => {
     let newList = [];
-    if (selectedFile.filter((item) => item.title == file.title).length) {
+    if (selectedFile.filter((item) => item.title === file.title).length) {
       newList = selectedFile.map((item) =>
-        item.title == file.title
+        item.title === file.title
           ? { ...item, selected: true }
           : { ...item, selected: false }
       );

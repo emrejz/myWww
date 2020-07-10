@@ -1,6 +1,6 @@
 import React from "react";
 import { Block, Text } from "styledComp";
-import { IAppState, IGlobalDispatch, IGameState } from "interfaces";
+import { IAppState, IGlobalDispatch } from "interfaces";
 interface Props {
   appState: IAppState;
   dispatch: IGlobalDispatch;

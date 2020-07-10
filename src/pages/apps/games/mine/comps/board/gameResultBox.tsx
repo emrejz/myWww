@@ -8,10 +8,10 @@ interface Props {
 
 const GameResultBox: React.FC<Props> = ({ gameStatus, gameDispatch }): any => {
   return (
-    (gameStatus == "fail" || gameStatus == "success") && (
+    (gameStatus === "fail" || gameStatus === "success") && (
       <Block col className="gameInfo">
         <Text ta="center" size="h3">
-          {gameStatus == "success"
+          {gameStatus === "success"
             ? "what a lucky player"
             : "what a bad player"}
         </Text>
