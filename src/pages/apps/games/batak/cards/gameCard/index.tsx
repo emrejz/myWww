@@ -21,25 +21,26 @@ export const BatakGameCard: React.FC<Props> = ({
   const _xx = card.slice(1, 3);
   const __x = card.slice(2, 3);
   const numberFinder = () =>
-    _x_ == "0" ? (
+    _x_ === "0" ? (
       <Text>{__x}</Text>
     ) : (
       <Text>
-        {_xx == "11" ? "J" : _xx == "12" ? "Q" : _xx == "13" ? "K" : _xx}
+        {_xx === "11" ? "J" : _xx === "12" ? "Q" : _xx === "13" ? "K" : _xx}
       </Text>
     );
   const imgFunc = (size: string) => (
     <img
       style={{ width: size, height: size }}
       src={require(`assets/images/${
-        x__ == "k"
+        x__ === "k"
           ? "kupa"
-          : x__ == "n"
+          : x__ === "n"
           ? "karo"
-          : x__ == "m"
+          : x__ === "m"
           ? "maca"
           : "sinek"
       }.png`)}
+      alt="cardType"
     />
   );
 
@@ -47,7 +48,7 @@ export const BatakGameCard: React.FC<Props> = ({
     <Block
       col
       className="gameCardContainer"
-      clr={x__ == "k" || x__ == "n" ? "redCard" : "black"}
+      clr={x__ === "k" || x__ === "n" ? "redCard" : "black"}
       style={{ top, left, right, bottom }}
     >
       <Block jc="flex-start">

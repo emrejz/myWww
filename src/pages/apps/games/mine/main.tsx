@@ -18,7 +18,7 @@ const Main: React.FC<Props> = ({ appState, dispatch }) => {
   const { gameState, gameDispatch } = useContext<IGameContext>(Context);
   // const stableGameDispatch = useCallback(gameDispatch, []);
   useEffect(() => {
-    if (gameState.gameStatus == "ready") {
+    if (gameState.gameStatus === "ready") {
       gameDispatch.startGame();
     }
   }, [gameState.gameStatus]);

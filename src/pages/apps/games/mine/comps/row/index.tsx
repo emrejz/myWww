@@ -9,7 +9,7 @@ interface Props {
 const Row: React.FC<Props> = ({
   item,
   gameDispatch: { openCell, flagCell },
-  icon
+  icon,
 }) => {
   const contextMenu = (
     e: React.MouseEvent<HTMLDivElement, MouseEvent>,
@@ -21,7 +21,7 @@ const Row: React.FC<Props> = ({
 
   return (
     <Block>
-      {item.map(cell => (
+      {item.map((cell) => (
         <Block
           jc="center"
           ai="center"
@@ -30,29 +30,29 @@ const Row: React.FC<Props> = ({
           bc={cell.open ? "grayMineCellOpen" : "grayMineCell"}
           className="mineCell"
           onClick={() => openCell(cell)}
-          onContextMenu={e => contextMenu(e, cell)}
+          onContextMenu={(e) => contextMenu(e, cell)}
           key={cell.x + cell.y}
         >
           {cell.flag ? (
             <img src={require("assets/images/flag.png")} alt="flag" />
-          ) : cell.val != "x" ? (
+          ) : cell.val !== "x" ? (
             <Text
               clr={
-                cell.val == 0
+                cell.val === 0
                   ? "trans"
-                  : cell.val == 1
+                  : cell.val === 1
                   ? "blueMine"
-                  : cell.val == 2
+                  : cell.val === 2
                   ? "greenMine"
-                  : cell.val == 3
+                  : cell.val === 3
                   ? "orangeMine"
-                  : cell.val == 4
+                  : cell.val === 4
                   ? "pinkMine"
-                  : cell.val == 5
+                  : cell.val === 5
                   ? "purpleMine"
-                  : cell.val == 6
+                  : cell.val === 6
                   ? "redMine"
-                  : cell.val == 7
+                  : cell.val === 7
                   ? "cyanMine"
                   : "yellowMine"
               }

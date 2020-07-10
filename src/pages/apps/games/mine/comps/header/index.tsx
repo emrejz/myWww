@@ -48,7 +48,11 @@ const GameHeader: React.FC<Props> = ({ appState, dispatch, gameState }) => {
       >
         <Text>mine:{mineCounter}</Text>
         <Text>
-          {gameStatus == "success" ? ":))" : gameStatus == "fail" ? ":(" : ":)"}
+          {gameStatus === "success"
+            ? ":))"
+            : gameStatus === "fail"
+            ? ":("
+            : ":)"}
         </Text>
         <Text>flag:{flagCounter}</Text>
       </Block>

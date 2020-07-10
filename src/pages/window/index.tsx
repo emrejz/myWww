@@ -46,7 +46,7 @@ const WindowScreen: React.FC = () => {
         >
           {appList.map(
             (item) =>
-              item.name != "shut down" && (
+              item.name !== "shut down" && (
                 <AppFile item={item} dispatch={dispatch} key={item.name} />
               )
           )}

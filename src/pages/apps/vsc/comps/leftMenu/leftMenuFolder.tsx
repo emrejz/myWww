@@ -79,14 +79,14 @@ const LeftMenuItems: React.FC<Props> = ({
     return total;
   };
   return statusFolder(name) ? (
-    <Block col wid={name == mainTags[0] ? "100%" : ""} pl={condPL(name)}>
+    <Block col wid={name === mainTags[0] ? "100%" : ""} pl={condPL(name)}>
       <Text
         size="textB"
         mar="3px 0px"
         mb={status ? "-3px" : "3px"}
-        pl={name == mainTags[0] ? "15px" : ""}
-        bc={name == mainTags[0] ? "grayVscWWWFolder" : ""}
-        wid={name == mainTags[0] ? "100%" : ""}
+        pl={name === mainTags[0] ? "15px" : ""}
+        bc={name === mainTags[0] ? "grayVscWWWFolder" : ""}
+        wid={name === mainTags[0] ? "100%" : ""}
         onClick={() => selectedFolderFunc(name)}
         className={status ? "downArrow" : "rightArrow"}
       >

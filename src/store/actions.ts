@@ -1,9 +1,9 @@
-import { IGlobalActionPayload, IGlobalAction, IGlobalState } from "interfaces";
+import { IGlobalActionPayload, IGlobalAction } from "interfaces";
 
 export enum GlobalActionTypes {
   openAppAction = "openAppAction",
   reSizeAppAction = "reSizeAppAction",
-  minSizeAppAction = "minSizeAppAction"
+  minSizeAppAction = "minSizeAppAction",
 }
 
 export function dispatchs(dispatch: React.Dispatch<IGlobalAction>) {
@@ -13,19 +13,19 @@ export function dispatchs(dispatch: React.Dispatch<IGlobalAction>) {
   function reSizeApp(payload: IGlobalActionPayload) {
     return dispatch({
       type: GlobalActionTypes.reSizeAppAction,
-      payload
+      payload,
     });
   }
   function minSizeApp(payload: IGlobalActionPayload) {
     return dispatch({
       type: GlobalActionTypes.minSizeAppAction,
-      payload
+      payload,
     });
   }
 
   return {
     openApp,
     reSizeApp,
-    minSizeApp
+    minSizeApp,
   };
 }

@@ -17,7 +17,7 @@ const LoadingScreen: React.FC<Props> = ({ loadedDocument }) => {
       clr="white"
       hei="100vh"
     >
-      {loadedDocument != "blueScreen" ? (
+      {loadedDocument !== "blueScreen" ? (
         <Block col ai="center">
           <Block className="loadingBox">
             <span></span>
