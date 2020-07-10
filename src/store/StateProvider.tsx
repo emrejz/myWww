@@ -33,7 +33,7 @@ const initialState: IGlobalState = {
       name: "batak",
       icon: "maca.png",
       open: false,
-      size: "fit-content",
+      size: "100%",
       zIndex: 19,
       isActive: false,
     },
