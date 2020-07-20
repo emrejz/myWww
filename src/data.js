@@ -1,6 +1,14 @@
 export default [
   {
     tag: ["all", "front", "noFrmwrk"],
+    title: "frontends-cli",
+    desc:
+      "A simple cli to automate front-end development. User can easily create the frontend project. And user can include sass, styled-components, context-api, router, storybook, svgr packages into the project without having to configure. For now usable for react projects.",
+    demo: "https://www.npmjs.com/package/frontends",
+    repo: "https://github.com/emrejz/frontends",
+  },
+  {
+    tag: ["all", "front", "noFrmwrk"],
     title: "wasm-circles",
     desc: "I created this project to learn webassembly with emscripten.",
     demo: "https://circle-webassembly.herokuapp.com/",
