@@ -83,6 +83,7 @@ const LeftMenuItems: React.FC<Props> = ({
       <Text
         size="textB"
         mar="3px 0px"
+        mr="16px"
         mb={status ? "-3px" : "3px"}
         pl={name === mainTags[0] ? "15px" : ""}
         bc={name === mainTags[0] ? "grayVscWWWFolder" : ""}
